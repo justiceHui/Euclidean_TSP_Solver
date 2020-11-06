@@ -1,0 +1,3 @@
+/TSP_data/*
+# Project exclude paths
+/cmake-build-debug/
