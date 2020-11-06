@@ -5,7 +5,7 @@
 #ifndef EUCLIDEAN_TSP_SOLVER_EDGE_H
 #define EUCLIDEAN_TSP_SOLVER_EDGE_H
 
-#include "General.h"
+#include "../General.h"
 
 struct Edge{
     int s, e; T x;
