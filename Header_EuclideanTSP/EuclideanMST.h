@@ -5,8 +5,8 @@
 #ifndef EUCLIDEAN_TSP_SOLVER_EUCLIDEANMST_H
 #define EUCLIDEAN_TSP_SOLVER_EUCLIDEANMST_H
 
-#include "DelaunayTriangulation.h"
-#include "Edge.h"
+#include "./DelaunayTriangulation.h"
+#include "./Edge.h"
 
 namespace EuclideanMST{
     namespace UnionFind{

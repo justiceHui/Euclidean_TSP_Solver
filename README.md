@@ -36,8 +36,8 @@ See `Triangulation::triangulate` Function Format
     * Output : Returns triangles, all points in triangle are counter-clockwise.
 
 ### Known Issues
-* floating point precision issue
-* memory leak issue
+* floating point precision issue - `DelaunayTriangulation.h`
+* memory leak issue - `DelaunayTriangulation.h`
 
 ### Special thanks to
 * [kactl/FastDelaunay.h](https://github.com/kth-competitive-programming/kactl/blob/master/content/geometry/FastDelaunay.h)

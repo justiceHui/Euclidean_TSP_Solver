@@ -1,5 +1,5 @@
-#include "General.h"
-#include "Header_EuclideanTSP/EuclideanTSP.h"
+#include "./General.h"
+#include "./Header_EuclideanTSP/EuclideanTSP.h"
 
 void OpenDataFile(const int TEST_NO){
     const string FILE_NAME = (TEST_NO < 10 ? "../TSP_data/0" : "../TSP_data/") + to_string(TEST_NO);

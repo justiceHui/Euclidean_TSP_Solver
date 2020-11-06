@@ -5,7 +5,7 @@
 #ifndef EUCLIDEAN_TSP_SOLVER_EUCLIDEANTSP_H
 #define EUCLIDEAN_TSP_SOLVER_EUCLIDEANTSP_H
 
-#include "EuclideanMST.h"
+#include "./EuclideanMST.h"
 
 namespace EuclideanTSP{
     vector<vector<int>> g;
