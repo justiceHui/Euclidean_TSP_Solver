@@ -3,6 +3,12 @@
 * O(N log N) 2-Approximation Euclidean TSP Solver
 * This code using Delaunay Triangulation and Euclidean MST. Worst time complexity is O(N log N)
 
+### Content
+* [Constraint](https://github.com/justiceHui/Euclidean_TSP_Solver#constraint)
+* **[FunctionFormat](https://github.com/justiceHui/Euclidean_TSP_Solver#function-format)**
+* **[Known Issues](https://github.com/justiceHui/Euclidean_TSP_Solver#known-issues)**
+* [Special thanks to](https://github.com/justiceHui/Euclidean_TSP_Solver#special-thanks-to)
+
 ### Constraint
 See `Triangulation::triangulate` Function Format
 
