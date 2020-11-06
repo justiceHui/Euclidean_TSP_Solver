@@ -15,9 +15,9 @@ bool validate(const vector<int> &vec){
 }
 
 int main() {
-    const int TEST_NO = 1;
-    const int TARGET_SCORE = 4817;
-    const int MAX_TRIAL = 1000;
+    const int TEST_NO = 8;
+    const T TARGET_SCORE = 197;
+    const int MAX_TRIAL = 10;
     setFileName(TEST_NO);
     
     openInputFile();
@@ -41,6 +41,6 @@ int main() {
     cerr << "score : " << sqrt(opt.x) << "\n";
     
     openOutputFile();
-    for(auto i : res.y) cout << i+1 << "\n";
+    for(auto i : opt.y) cout << i+1 << "\n";
     closeOutputFile();
 }

@@ -1,7 +1,9 @@
 # Euclidean-TSP-Solver
 
 * O(N log N) 2-Approximation Euclidean TSP Solver
+    * and some Optimizer
 * This code using Delaunay Triangulation and Euclidean MST. Worst time complexity is O(N log N)
+* Solving `Czech, Polish and Slovak Preparation Camp 2007 : Vista 1-10` Problems
 
 ### Content
 * [Constraint](https://github.com/justiceHui/Euclidean_TSP_Solver#constraint)

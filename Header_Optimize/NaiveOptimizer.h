@@ -35,7 +35,7 @@ namespace NaiveOptimizer{
         T val = evaluate(now);
         
         cerr << "Epoch #" << epoch << ": " << sqrt(val) << "\n";
-        while(val > ed){
+        while(val > ed*ed){
             for(int i=0; i<100; i++){
                 vector<int> nxt = transition(now);
                 T nxtVal = evaluate(nxt);
