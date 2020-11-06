@@ -2,15 +2,13 @@
 
 * O(N log N) 2-Approximation Euclidean TSP Solver
 * This code using Delaunay Triangulation and Euclidean MST. Worst time complexity is O(N log N)
-* Usage
-    * Input  : EuclideanTSP::euclideanTSP({{X0, Y0}, {X1, Y1}, ...}, StartPoint)
-    * Output : {TotalDistance, {P0, P1, ..., P0}}
 
 ### Constraint
 See `Triangulation::triangulate` Function Format
 
 ### Function Format
 > Reading `main.cpp` can be helpful to know about function format.
+>
 > `using T = long double;`
 
 * `std::pair<T, std::vector<int>> EuclideanTSP::euclideanTSP(std::vector<std::pair<T, T>> v, int root)`
