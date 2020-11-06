@@ -1,22 +1,30 @@
-#include "./General.h"
-#include "./Header_EuclideanTSP/EuclideanTSP.h"
+#include <random>
 
-void OpenDataFile(const int TEST_NO){
-    const string FILE_NAME = (TEST_NO < 10 ? "../TSP_data/0" : "../TSP_data/") + to_string(TEST_NO);
-    const string INPUT_FILE = FILE_NAME + ".in";
-    const string OUTPUT_FILE = FILE_NAME + ".out";
-    const string ERROR_FILE = FILE_NAME + ".err";
-    freopen(INPUT_FILE.c_str(), "r", stdin);
-    freopen(OUTPUT_FILE.c_str(), "w", stdout);
-    //freopen(ERROR_FILE.c_str(), "w", stderr);
+#include "./Header_Global/General.h"
+#include "./Header_Global/FileManage.h"
+#include "./Header_EuclideanTSP/EuclideanTSP.h"
+#include "./Header_Optimize/NaiveOptimizer.h"
+
+bool validate(const vector<int> &vec){
+    vector<bool> chk(vec.size()-1);
+    for(int i=0; i<vec.size()-1; i++){
+        if(chk[vec[i]]) return false;
+        chk[vec[i]] = true;
+    }
+    return true;
 }
 
 int main() {
     const int TEST_NO = 1;
+    const int TARGET_SCORE = 4817;
     const int MAX_TRIAL = 1000;
-    OpenDataFile(TEST_NO);
+    setFileName(TEST_NO);
+    
+    openInputFile();
     int N; cin >> N;
     vector<P> V(N); for(auto &i : V) cin >> i;
+    closeInputFile();
+    
     auto res = EuclideanTSP::euclideanTSP(V, 0);
     
     vector<int> trial(N);
@@ -24,7 +32,15 @@ int main() {
     shuffle(all(trial), std::mt19937(std::random_device()()));
     for(int i=0; i<min(N, MAX_TRIAL); i++){
         res = min(res, EuclideanTSP::euclideanTSP(V, trial[i]));
+        cerr << "Euclidean Epoch #" << i+1 << ": " << sqrt(res.x) << "\n";
     }
+    assert(validate(res.y));
+    
     cerr << "score : " << sqrt(res.x) << "\n";
+    auto opt = NaiveOptimizer::optimize(V, res.y, TARGET_SCORE);
+    cerr << "score : " << sqrt(opt.x) << "\n";
+    
+    openOutputFile();
     for(auto i : res.y) cout << i+1 << "\n";
+    closeOutputFile();
 }

@@ -5,7 +5,7 @@
 #ifndef EUCLIDEAN_TSP_SOLVER_DELAUNAYTRIANGULATION_H
 #define EUCLIDEAN_TSP_SOLVER_DELAUNAYTRIANGULATION_H
 
-#include "../General.h"
+#include "../Header_Global/General.h"
 
 // https://github.com/bqi343/USACO/blob/master/Implementations/content/geometry%20(13)/Misc/DelaunayFast.h
 namespace Triangulation{
